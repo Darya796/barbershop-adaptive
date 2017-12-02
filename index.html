@@ -11,21 +11,82 @@
 <body>
 
   <header class="page-header">
-    <div class="page-header__logo"></div>
+    <h1 class="visually-hidden">
+      Барбершоп "Бородинский" - истинно мужская классика
+    </h1>
 
-    <nav class="main-nav">
+    <div class="page-header__logo">
+      <img src="img/logo.png"
+      width="370" height="153" alt="Барбершоп Бородинский">
+    </div>
+
+    <nav class="main-nav main-nav--closed main-nav--no-js">
+      <button class="main-nav__toggle" type="button">
+        Открыть меню
+      </button>
+
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list"></ul>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item">
+             <a href="#">Наши работы</a>
+          </li>
+          <li class="main-nav__item">
+              <a href="#">Записаться</a>
+          </li>
+          <li class="main-nav__item">
+             <a href="#">Контакты</a>
+          </li>
+          <li class="main-nav__item">
+             <a href="#">HTML Academy</a>
+          </li>
+         </ul>
 
-        <ul class="main-nav__user-list"></ul>
+        <ul class="main-nav__user-list">
+          <li class="main-nav__user-item">
+            <a class="main-nav__user-login" href="" title="Войти">
+              Вход
+            </a>
+          </li>
+        </ul>
       </div>
       <nav>
   </header>
 
   <section class="stats">
-    <header class="stats__header"></header>
-    <table class="stats__list"></table>
-  </section>
+     <header class="stats__header">
+       <h2 class="stats__title visually-hidden">Статистика</h2>
+       <b class="stats__slogan">Стрижка у нас<br> это выгодно!</b>
+       <p class="stats__intro">Мужская стрижка требует точного подхода.
+         Обратимся к статистике:</p>
+       <small class="stats__legend stats__legend--top"><sup>*</sup>
+         - приведенные данные - ложь</small>
+     </header>
+
+     <table class="stats__list">
+       <tr>
+        <td class="stats__value">1 500<sup>*</sup></td>
+        <td class="stats__field">рублей<br> вложений</td>
+      </tr>
+      <tr>
+       <td class="stats__value">7 200</td>
+       <td class="stats__field">секунд<br> времени мастера</td>
+     </tr>
+     <tr>
+       <td class="stats__value">90 000</td>
+       <td class="stats__field">постриженных<br> волос</td>
+     </tr>
+     <tr>
+       <td class="stats__value">500 000<sup>*</sup></td>
+       <td class="stats__field">лайков и<br> комплиментов</td>
+     </tr>
+   </table>
+
+    <small class="stats__legend stats__legend--bottom"><sup>*</sup>
+      - приведенные данные - ложь</small>
+   </section>
 
   <section class="advantages">
     <div class="advantages__wrapper">
@@ -51,6 +112,23 @@
       </ul>
     </div>
 </section>
+
+<script>
+var navMain = document.querySelector(".main-nav");
+var navToggle = document.querySelector(".main-nav__toggle");
+
+navMain.classList.remove("main-nav--no-js");
+
+navToggle.addEventListener("click", function() {
+  if (navMain.classList.contains("main-nav--closed")) {
+    navMain.classList.remove("main-nav--closed");
+    navMain.classList.add("main-nav--opened");
+  } else {
+    navMain.classList.add("main-nav--closed");
+    navMain.classList.remove("main-nav--opened");
+  }
+});
+</script>
 
 </body>
 </html>
