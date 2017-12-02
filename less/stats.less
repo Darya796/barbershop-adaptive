@@ -1,5 +1,9 @@
 .stats {
-  .container();
+  /*.container();
+  float*/
+
+  .container-fluid();
+  /*flex*/
 }
 
 .stats__header {
@@ -122,7 +126,7 @@
   }
 
   .stats__header {
-    .clearfix();
+    /*.clearfix();
 
     position: relative;
 
@@ -130,6 +134,19 @@
     padding: 0;
     padding-top: 31px;
     padding-bottom: 24px;
+    float*/
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 31px 40px;
+    padding-bottom: 24px;
+    /*flex*/
+
+    outline: 2px solid red;
 
     &::before {
       content: "";
@@ -144,35 +161,61 @@
   }
 
   .stats__slogan {
-    float: left;
+    /*float: left;
     width: 280px;
     padding-left: 40px;
+    float*/
+
+    width: 50%;
+    /*flex*/
+
     margin-bottom: 20px;
 
     font-size: 40px;
     line-height: 40px;
     text-align: left;
-    text-transform: uppercase;
+    text-transform: none;
+
+    outline: 2px solid green;
+    outline-offset: -5px;
   }
 
   .stats__intro {
-    float: right;
+    /*float: right;
     width: 210px;
     padding: 0;
     padding-top: 4px;
     padding-right: 80px;
+    float*/
+
+    width: 37.5%;
+    padding: 0;
+    padding-left: 30px;
+    padding-top: 4px;
+    /*flex*/
 
     text-align: left;
+
+    outline: 2px solid green;
+    outline-offset: -5px;
   }
 
   .stats__legend--top {
-    display: block;
-    float: left;
+    /*float: left;
     clear: left;
     width: 280px;
     padding-left: 40px;
+    float*/
+
+    display: block;
+
+    width: 50%;
+    /*flex*/
 
     color: rgba(0, 0, 0, 0.3);
+
+    outline: 2px solid green;
+    outline-offset: -5px;
   }
 
   .stats__legend--bottom {
@@ -180,15 +223,34 @@
   }
 
   .stats__list {
-    .clearfix();
+    /*.clearfix();
+    float*/
 
     display: block;
   }
 
+  .stats__list tbody {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex*/
+  }
+
   .stats__list tr {
-    display: block;
-    float: left;
+    /*float: left;
     width: 250px;
+    float*/
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 50%;
+    /*flex
+     or
+     flex-basis: 250px;
+     flex-grow: 1;
+     будет тянуться на всю шир.,
+     когда нечетное кол-во (один на строке)*/
+
     padding: 25px 35px;
     padding-bottom: 28px;
   }
@@ -220,19 +282,26 @@
 
 @media @desktop-widths {
   .stats {
-    .clearfix();
+    /*.clearfix();
+    float*/
+
+    display: flex;
+    /*flex*/
 
     margin-top: -159px;
   }
 
   .stats__header {
-    float: left;
+    /*float: left;
+    float*/
+
+    flex-grow: 1;
+    flex-direction: column;
+    /*flex*/
+
     width: 240px;
     padding-left: 40px;
     padding-right: 40px;
-
-    min-height: 263px;
-    /*temp*/
 
     &::before {
       top: 22px;
@@ -240,30 +309,47 @@
   }
 
   .stats__slogan {
-    float: none;
+    /*float: none;
+    padding-left: 0;
+    float*/
+
     width: auto;
     margin-bottom: 42px;
-    padding-left: 0;
 
     font-size: 30px;
   }
 
   .stats__intro {
-    float: none;
+    /*float: none;
+    float*/
+
     width: auto;
     margin-bottom: 32px;
     padding: 0;
   }
 
   .stats__legend--top {
-    float: none;
-    width: auto;
+    /*float: none;
     padding-left: 0;
+    float*/
+
+    width: auto;
+
+    margin-top: auto;
+    /*flex*/
   }
 
   .stats__list {
-    float: right;
+    /*float: right;
     display: block;
+    float*/
+
+    display: flex;
+    flex-grow: 1;
+    /*flex
+    при изменении высоты slogan,
+    intro также подстраиваются по высоте*/
+
     width: 640px;
   }
 }
