@@ -1,13 +1,9 @@
 .main-nav {
   position: relative;
+                                   /*width: 320px;*/
+  width: auto;  /*from flex*/      /*margin: 0 auto;  from float*/
 
-  width: auto;
-  /*from flex*/
-  min-height: 50px;
-  /*width: 320px;
-  margin: 0 auto;
-  from float*/
-
+  min-height: 51px;
   background-color: #826550;
 }
 
@@ -19,7 +15,7 @@
 
   display: block;
   width: 70px;
-  height: 50px;
+  height: 49px;
 
   font-size: 0;
 
@@ -155,8 +151,8 @@
 
     background-color: red;
     /*background-image: url("../img/icon-login.png");
-    background-position:;*/
-    opacity: 0.3;
+    background-position:;
+    opacity: 0.3;*/
   }
 }
 
@@ -239,22 +235,14 @@
     min-height: 70px;
     margin: 0;
 
-    background-color: black;
+    background-color: #000000;
   }
 
-  .main-nav__wrapper {
-    /*.container();
-    .clearfix();
-    from float*/
-
-    .container-fluid();
+  .main-nav__wrapper {                 /*.container();*/
+    .container-fluid();  /*flex*/      /*.clearfix();  from float*/
 
     display: flex;
     justify-content: space-between;
-    /*flex*/
-
-    outline: 2px solid red;
-    outline-offset: 3px;
   }
 
   .main-nav__toggle {
@@ -262,31 +250,18 @@
   }
 
   .main-nav__list {
-    /*float: left;
-    width: 570px;
-    from float*/
 
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;           /*float: left;*/
+    flex-wrap: wrap;         /*width: 570px;  from float*/
     flex-grow: 1;
     justify-content: space-between;
-    /*flex*/
-
-    outline: 2px solid yellow;
-    outline-offset: -3px;
   }
 
-  .main-nav__user-list {
-    /*float: right;
-    from float*/
+  .main-nav__user-list {   /*float: right;   from float*/
     width: 60px;
-
-    outline: 2px solid yellow;
-    outline-offset: -3px;
   }
 
-  .main-nav__item {
-    /*float: left;*/
+  .main-nav__item {       /*float: left;*/
     margin-right: 32px;
 
     &:last-child {
@@ -317,9 +292,6 @@
 
     background: none;
     border: none;
-
-    outline: 2px solid yellow;
-    outline-offset: -3px;
   }
 
   .main-nav__item a[href] {
@@ -347,26 +319,21 @@
       left: 12px;
     }
 
-    &:hover::before {
-      /*background-position: ;*/
+    /*&:hover::before {
+      background-position: ;
       opacity: 1;
-    }
+    }*/
 
-    &:active::before {
+    /*&:active::before {
       background-color: brown;
-      /*background-position: ;*/
+      background-position: ;
       opacity: 0.3;
-    }
+    }*/
   }
 }
 
 
 @media @desktop-widths {
-  .main-nav__list {
-    /*width: 780px;
-    float*/
-  }
-
   .main-nav__item {
     margin-right: 0;
 
@@ -433,10 +400,10 @@
       /*background-position: ;*/
     }
 
-    &:active::before {
-      /*background-position: ;*/
+    /*&:active::before {
+      background-position: ;
       opacity: 0.1;
-    }
+    }*/
   }
 
   .main-nav__user-login::before {

@@ -1,9 +1,5 @@
 .stats {
-  /*.container();
-  float*/
-
-  .container-fluid();
-  /*flex*/
+  .container-fluid();  /*flex*/      /*.container();  float*/
 }
 
 .stats__header {
@@ -14,9 +10,6 @@
   color: #000000;
 
   background-color: #ffffff;
-
-  min-height: 130px;
-  /*temp*/
 }
 
 .stats__slogan {
@@ -101,6 +94,7 @@
   padding-right: 0;
 
   font-size: 40px;
+  font-weight: bold;
   line-height: 40px;
 }
 
@@ -122,20 +116,10 @@
     .stats {
     position: relative;
     z-index: 1;
-    margin-top: -184px;
+    margin-top: -175px;
   }
 
-  .stats__header {
-    /*.clearfix();
-
-    position: relative;
-
-    min-height: 129px;
-    padding: 0;
-    padding-top: 31px;
-    padding-bottom: 24px;
-    float*/
-
+  .stats__header {            /*.clearfix();  float*/
     position: relative;
 
     display: flex;
@@ -144,9 +128,6 @@
 
     padding: 31px 40px;
     padding-bottom: 24px;
-    /*flex*/
-
-    outline: 2px solid red;
 
     &::before {
       content: "";
@@ -160,97 +141,58 @@
     }
   }
 
-  .stats__slogan {
-    /*float: left;
-    width: 280px;
-    padding-left: 40px;
-    float*/
-
-    width: 50%;
-    /*flex*/
-
+  .stats__slogan {              /*float: left;*/
+    width: 50%; /*flex*/        /*width: 280px;
+                                padding-left: 40px;  float*/
     margin-bottom: 20px;
 
     font-size: 40px;
     line-height: 40px;
     text-align: left;
     text-transform: none;
-
-    outline: 2px solid green;
-    outline-offset: -5px;
   }
 
-  .stats__intro {
-    /*float: right;
-    width: 210px;
-    padding: 0;
-    padding-top: 4px;
-    padding-right: 80px;
-    float*/
-
-    width: 37.5%;
+  .stats__intro {                  /*float: right;*/
+    width: 37.5%;  /*flex*/        /*width: 210px;  float*/
     padding: 0;
     padding-left: 30px;
     padding-top: 4px;
-    /*flex*/
 
     text-align: left;
-
-    outline: 2px solid green;
-    outline-offset: -5px;
   }
 
-  .stats__legend--top {
-    /*float: left;
-    clear: left;
-    width: 280px;
-    padding-left: 40px;
-    float*/
-
-    display: block;
-
-    width: 50%;
-    /*flex*/
+  .stats__legend--top {                   /*float: left;*/
+    display: block;                       /*clear: left;
+                                          width: 280px;*/
+    width: 50%;  /*flex*/                 /*padding-left: 40px;  float*/
 
     color: rgba(0, 0, 0, 0.3);
-
-    outline: 2px solid green;
-    outline-offset: -5px;
   }
 
   .stats__legend--bottom {
     display: none;
   }
 
-  .stats__list {
-    /*.clearfix();
-    float*/
-
+  .stats__list {           /*.clearfix();  float*/
     display: block;
   }
 
   .stats__list tbody {
     display: flex;
     flex-wrap: wrap;
-    /*flex*/
   }
 
   .stats__list tr {
-    /*float: left;
-    width: 250px;
-    float*/
-
     display: block;
 
-    box-sizing: border-box;
-    width: 50%;
-    /*flex
-     or
-     flex-basis: 250px;
-     flex-grow: 1;
-     будет тянуться на всю шир.,
-     когда нечетное кол-во (один на строке)*/
-
+    box-sizing: border-box;                 /*float: left;
+                                            width: 250px;  float*/
+    width: 50%;     /*flex*/
+    /*or
+    flex-basis: 250px;
+    flex-grow: 1;
+    будет тянуться на всю шир.,
+    когда нечетное кол-во (один на строке)*/
     padding: 25px 35px;
     padding-bottom: 28px;
   }
@@ -281,23 +223,15 @@
 }
 
 @media @desktop-widths {
-  .stats {
-    /*.clearfix();
-    float*/
-
+  .stats {                    /*.clearfix();  float*/
     display: flex;
-    /*flex*/
 
     margin-top: -159px;
   }
 
-  .stats__header {
-    /*float: left;
-    float*/
-
+  .stats__header {         /*float: left;  float*/
     flex-grow: 1;
     flex-direction: column;
-    /*flex*/
 
     width: 240px;
     padding-left: 40px;
@@ -308,46 +242,29 @@
     }
   }
 
-  .stats__slogan {
-    /*float: none;
-    padding-left: 0;
-    float*/
-
-    width: auto;
+  .stats__slogan {          /*float: none;*/
+    width: auto;            /*padding-left: 0;  float*/
     margin-bottom: 42px;
 
     font-size: 30px;
   }
 
-  .stats__intro {
-    /*float: none;
-    float*/
-
+  .stats__intro {            /*float: none;  float*/
     width: auto;
     margin-bottom: 32px;
     padding: 0;
   }
 
-  .stats__legend--top {
-    /*float: none;
-    padding-left: 0;
-    float*/
+  .stats__legend--top {               /*float: none;*/
+    width: auto;                      /*padding-left: 0;  float*/
 
-    width: auto;
-
-    margin-top: auto;
-    /*flex*/
+    margin-top: auto;  /*flex*/
   }
 
-  .stats__list {
-    /*float: right;
-    display: block;
-    float*/
-
-    display: flex;
+  .stats__list {                   /*float: right;*/
+    display: flex;                 /*display: block;  float*/
     flex-grow: 1;
-    /*flex
-    при изменении высоты slogan,
+    /*при изменении высоты slogan,
     intro также подстраиваются по высоте*/
 
     width: 640px;

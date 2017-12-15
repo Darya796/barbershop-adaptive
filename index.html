@@ -16,8 +16,12 @@
     </h1>
 
     <div class="page-header__logo">
-      <img src="img/logo.png"
-      width="370" height="153" alt="Барбершоп Бородинский">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mob.svg" width="370" height="153"
+        alt="Барбершоп Бородинский">
+      </picture>
     </div>
 
     <nav class="main-nav main-nav--closed main-nav--no-js">
@@ -89,46 +93,147 @@
    </section>
 
   <section class="advantages">
-    <div class="advantages__wrapper">
-
+    <div class="advantages__wrapper slider">
+      <h2 class="advantages__title visually-hidden">Наши преимущества</h2>
+<!--
+      <input class="slider__input" type="radio" name="advantages"
+      id="advantages-input-1" checked>
+      <input class="slider__input" type="radio" name="advantages"
+      id="advantages-input-2">
+      <input class="slider__input" type="radio" name="advantages"
+      id="advantages-input-3">
+-->
       <ul class="advantages__list">
-        <li class="advantages__item"></li>
-        <li class="advantages__item"></li>
-        <li class="advantages__item"></li>
+        <li class="advantages__item advantages__item--fas">
+          <h3 class="advantages__item-title">Быстро</h3>
+          <p>Мы делаем свою работу быстро! Два часа пролетят незаметно
+            и Вы - счастливый обладатель стильной стрижки-минутки!</p>
+        </li>
+        <li class="advantages__item advantages__item--cool">
+          <h3 class="advantages__item-title">Круто</h3>
+          <p>Забудьте, как вы стриглись раньше! Мы сделаем из вас звезду
+            футбола и кино! Во всяком случае, внешне.</p>
+        </li>
+        <li class="advantages__item advantages__item--expensive">
+          <h3 class="advantages__item-title">Дорого</h3>
+          <p>Наши мастера - профессионалы своего дела и не могут стоить
+            дешево. К тому же, разве цена не дает определенный статус?</p>
+        </li>
       </ul>
-
+<!--
+      <div class="advantages__toggles slider__toggles">
+         <label class="slider__toggle" for="advantages-input-1">1</label>
+         <label class="slider__toggle" for="advantages-input-2">2</label>
+         <label class="slider__toggle" for="advantages-input-3">3</label>
+       </div>
+-->
     </div>
   </section>
+
 
   <section class="news">
     <div class="news__wrapper">
 
-      <h2 class="news__title"></h2>
+      <h2 class="news__title">Новости и акции</h2>
 
       <ul class="news__list">
-        <li class="news__item"></li>
-        <li class="news__item"></li>
-        <li class="news__item"></li>
+        <li class="news__item">
+          <time class="news__date" datetime="2015-09-29">
+            <b>29</b>сент</time>
+          <p>Нам наконец завезли Ягермайстер! Теперь вы можете
+            пропустить стаканчик во время стрижки.</p>
+        </li>
+        <li class="news__item">
+          <time class="news__date" datetime="2015-09-19">
+            <b>19</b>сент</time>
+          <p>В нашей команде пополнение, Борис "Бритва" Стригунец,
+            обладатель множества титулов и наград, пополнил наши
+            стройные ряды. Спешите записаться!</p>
+        </li>
+        <li class="news__item">
+          <time class="news__date" datetime="2015-09-09">
+            <b>9</b>сент</time>
+          <p>Все дорожает, а наши стрижки нет! Как так? Приходите,
+            постригитесь и узнаете в чем здесь подвох!</p>
+        </li>
       </ul>
+      <a class="news__to-all btn" href="">Показать все</a>
     </div>
 </section>
 
-<script>
-var navMain = document.querySelector(".main-nav");
-var navToggle = document.querySelector(".main-nav__toggle");
+<section class="reviews">
+     <div class="reviews__wrapper slider">
+       <h2 class="reviews__title">Отзывы о нас</h2>
+       <a class="reviews__write btn" href="">Оставить свой</a>
+       <input class="slider__input" type="radio" name="reviews"
+       id="reviews-input-1" checked>
+       <input class="slider__input" type="radio" name="reviews"
+       id="reviews-input-2">
+       <input class="slider__input" type="radio" name="reviews"
+       id="reviews-input-3">
 
-navMain.classList.remove("main-nav--no-js");
+       <div class="reviews__list">
+         <blockquote class="reviews__item slider__item">
+           <div class="reviews__author-photo">
+             <img src="img/rev-photo.jpg" width="50" height="33"
+             alt="Фото Тревиса Баркера">
+           </div>
+            <cite class="reviews__author-name">Тревис Баркер</cite>
+            <p>Спасибо за лысину! Был проездом в Москве, заскочил
+            побриться, чтобы было видно новую татуировку</p>
+          </blockquote>
+ -...
 
-navToggle.addEventListener("click", function() {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
-  } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
-  }
-});
-</script>
+          <button class="reviews__prev" type="button">
+            Предыдущий отзыв
+          </button>
+          <button class="reviews__next" type="button">
+            Следующий отзыв
+          </button>
+       </div>
 
+       <div class="reviews__toggles slider__toggles">
+         <label class="slider__toggle" for="reviews-input-1">1</label>
+         <label class="slider__toggle" for="reviews-input-2">2</label>
+         <label class="slider__toggle" for="reviews-input-3">3</label>
+       </div>
+     </div>
+   </section>
+
+   <footer class="page-footer">
+     <div class="page-footer__wrapper">
+       <p class="page-footer__contacts">
+         <b>Барбершоп "Бородинский"<br>
+           г.Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+           <a href="tel:+78125556666">
+             <span class="page-footer__contacts-hidden">
+               Тел.:
+             </span>
+             +7 (812) 555-66-66
+           </a>
+         </b>
+       </p>
+
+       <p class="page-footer__social">
+         <span class="social-links">
+           <a class="social-link social-link--vk" href="#">
+           Мы в Вконтакте</a>
+           <a class="social-link social-link--fb" href="#">
+           Мы в Фейсбуке</a>
+           <a class="social-link social-link--inst" href="#">
+           Мы в Инстаграме</a>
+         </span>
+       </p>
+
+       <p class="page-footer__copyright">
+         Разработано:
+         <a class="btn page-footer__copyright-link"
+           href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+         </a>
+       </p>
+     </div>
+   </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
