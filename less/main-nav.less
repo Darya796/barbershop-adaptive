@@ -37,7 +37,7 @@
   content: "";
   position: absolute;
   top: 15px;
-  left: 17px;
+  left: 24px;
 
   width: 36px;
   height: 2px;
@@ -149,12 +149,13 @@
     width: 16px;
     height: 16px;
 
-    background-color: red;
-    /*background-image: url("../img/icon-login.png");
-    background-position:;
-    opacity: 0.3;*/
+    background-image: url("../img/login_sprite.png");
+    background-position:-10px -10px;
+    opacity: 0.3;
   }
 }
+
+
 
 @media @mobile-widths-only {
   .main-nav--closed .main-nav__item {
@@ -174,6 +175,26 @@
   .main-nav--closed .main-nav__user-list {
     display: none;
   }
+
+  .main-nav__user-login {
+    &:hover {
+      background-color: #634835;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      background-color: #5e4532;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
 }
 
 .main-nav--opened .main-nav__wrapper {
@@ -183,7 +204,7 @@
   left: 70px;
   z-index: 10;
 
-  height: 80vh;
+  // height: 80vh;
   background-color: #6a4d38;
 }
 
@@ -316,19 +337,18 @@
 
     &::before {
       top: 29px;
-      left: 12px;
+      left: 35px;
     }
 
-    /*&:hover::before {
-      background-position: ;
+    &:hover::before {
+      background-position: -10px -46px;
       opacity: 1;
-    }*/
+    }
 
-    /*&:active::before {
-      background-color: brown;
-      background-position: ;
+    &:active::before {
+      background-position: -10px -10px;
       opacity: 0.3;
-    }*/
+    }
   }
 }
 
@@ -397,13 +417,12 @@
     }
 
     &:hover::before {
-      /*background-position: ;*/
+      background-position: -10px -82px;
     }
 
-    /*&:active::before {
-      background-position: ;
-      opacity: 0.1;
-    }*/
+    &:active::before {
+      opacity: 0.2;
+    }
   }
 
   .main-nav__user-login::before {

@@ -50,7 +50,7 @@
 
         <ul class="main-nav__user-list">
           <li class="main-nav__user-item">
-            <a class="main-nav__user-login" href="" title="Войти">
+            <a class="main-nav__user-login" href="#" title="Войти">
               Вход
             </a>
           </li>
@@ -104,7 +104,7 @@
       id="advantages-input-3">
 -->
       <ul class="advantages__list">
-        <li class="advantages__item advantages__item--fas">
+        <li class="advantages__item advantages__item--fast">
           <h3 class="advantages__item-title">Быстро</h3>
           <p>Мы делаем свою работу быстро! Два часа пролетят незаметно
             и Вы - счастливый обладатель стильной стрижки-минутки!</p>
@@ -165,62 +165,88 @@
      <div class="reviews__wrapper slider">
        <h2 class="reviews__title">Отзывы о нас</h2>
        <a class="reviews__write btn" href="">Оставить свой</a>
+<!--
        <input class="slider__input" type="radio" name="reviews"
        id="reviews-input-1" checked>
        <input class="slider__input" type="radio" name="reviews"
        id="reviews-input-2">
        <input class="slider__input" type="radio" name="reviews"
        id="reviews-input-3">
+-->
 
        <div class="reviews__list">
          <blockquote class="reviews__item slider__item">
            <div class="reviews__author-photo">
-             <img src="img/rev-photo.jpg" width="50" height="33"
-             alt="Фото Тревиса Баркера">
+             <picture>
+               <source media="(min-width: 1200px)" srcset="img/user-photo-1.jpg">
+               <source media="(min-width: 768px)" srcset="img/user-photo-1-tab.jpg">
+                 <img src="img/user-photo-1-mob.jpg" alt="Фото Тревиса Баркера">
+             </picture>
            </div>
             <cite class="reviews__author-name">Тревис Баркер</cite>
             <p>Спасибо за лысину! Был проездом в Москве, заскочил
-            побриться, чтобы было видно новую татуировку</p>
+            побриться, чтобы было видно новую татуировку!</p>
           </blockquote>
- -...
 
-          <button class="reviews__prev" type="button">
+          <blockquote class="reviews__item slider__item">
+            <div class="reviews__author-photo">
+              <img src="" width="50" height="47"
+              alt="Фото Джона Смита">
+            </div>
+             <cite class="reviews__author-name">Джон Смит</cite>
+             <p>Отличную стрижку мне сделали ребята.</p>
+           </blockquote>
+
+           <blockquote class="reviews__item slider__item">
+             <div class="reviews__author-photo">
+               <img src="" width="50" height="47"
+               alt="Фото Ивана Бородайло">
+             </div>
+              <cite class="reviews__author-name">Иван Бородайло</cite>
+              <p>В Бородинском ваша борода в надежных руках!</p>
+            </blockquote>
+
+          <button class="reviews__prev disabled" type="button">
             Предыдущий отзыв
           </button>
           <button class="reviews__next" type="button">
             Следующий отзыв
           </button>
        </div>
-
+<!--
        <div class="reviews__toggles slider__toggles">
          <label class="slider__toggle" for="reviews-input-1">1</label>
          <label class="slider__toggle" for="reviews-input-2">2</label>
          <label class="slider__toggle" for="reviews-input-3">3</label>
        </div>
+-->
      </div>
    </section>
 
+
    <footer class="page-footer">
      <div class="page-footer__wrapper">
+
        <p class="page-footer__contacts">
-         <b>Барбершоп "Бородинский"<br>
-           г.Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-           <a href="tel:+78125556666">
+         <b>Барбершоп "Бородинский"</b><br>
+           г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+           <a  class="btn page-footer__contacts-link"
+           href="tel:+78125556666">
              <span class="page-footer__contacts-hidden">
                Тел.:
              </span>
              +7 (812) 555-66-66
            </a>
-         </b>
-       </p>
+         </p>
 
        <p class="page-footer__social">
          <span class="social-links">
-           <a class="social-link social-link--vk" href="#">
+           Давайте дружить!
+           <a class="social-link social-link--vk" href="">
            Мы в Вконтакте</a>
-           <a class="social-link social-link--fb" href="#">
+           <a class="social-link social-link--fb" href="">
            Мы в Фейсбуке</a>
-           <a class="social-link social-link--inst" href="#">
+           <a class="social-link social-link--inst" href="">
            Мы в Инстаграме</a>
          </span>
        </p>
