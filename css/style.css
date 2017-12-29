@@ -50,13 +50,13 @@ img {
 }
 .slider__toggle {
   display: inline-block;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   margin-right: 25px;
   vertical-align: middle;
   background-color: transparent;
   outline: 1px solid #a5a5a5;
-  outline-offset: -2px;
+  outline-offset: -1px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   cursor: pointer;
@@ -1611,7 +1611,7 @@ img {
   left: 0;
   width: 50%;
   height: 35px;
-  background-image: linear-gradient(to right top, #f8f5f2 49%, transparent 49%);
+  background-image: linear-gradient(to right top, #292929 49%, transparent 49%);
 }
 .price::after {
   content: "";
@@ -1620,7 +1620,7 @@ img {
   left: 50%;
   width: 50%;
   height: 35px;
-  background-image: linear-gradient(to left top, #f8f5f2 49%, transparent 49%);
+  background-image: linear-gradient(to left top, #292929 49%, transparent 49%);
 }
 .price__wrapper {
   width: auto;
