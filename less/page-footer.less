@@ -1,22 +1,23 @@
 .page-footer__wrapper {
-  .container();
+  .container-fluid();
 
   padding-top: 35px;
   padding-bottom: 25px;
 
   text-align: center;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 28px;
 }
 
 .page-footer__contacts {
   position: relative;
-  padding: 0 55px;
-  margin-bottom: 105px;
+  margin: 0 20px;
+  padding: 0 40px;
+  margin-bottom: 95px;
 
   b {
     display: inline-block;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
   }
 
   &-hidden {
@@ -27,8 +28,8 @@
     position: absolute;
     display: block;
 
-    left: 20px;
-    right: 20px;
+    left: 0;
+    right: 0;
     margin-top: 20px;
     padding: 15px 70px;
 
@@ -53,16 +54,20 @@
 }
 
 .social-links {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   font-size: 0;
 }
 
 .social-link {
   display: inline-block;
 
-  width: 105px;
+  width: 34%;
   height: 100px;
-  vertical-align: top;
+  vertical-align: middle;
   text-decoration: none;
   background: transparent url("../img/social-sprite.png") no-repeat;
 
@@ -72,44 +77,34 @@
   &:hover {
     outline-color: #545454;
   }
+
+  &:active {
+    outline: none;
+    background-color: #252525;
+    opacity: 0.3;
+  }
 }
 
 .social-link--vk {
-  background-position: -8px -15px;
-
-  &:active {
-    opacity: 0.3;
-    outline: none;
-    // background: #252525;
-  }
+  background-position: 55% -15px;
+  // background-position: -8px -15px;
 }
 .social-link--fb {
-  background-position: -5px -285px;
-
-  &:active {
-    opacity: 0.3;
-    outline: none;
-    // background: #252525;
-  }
+  background-position: 55% -285px;
+  // background-position: -5px -285px;
 }
 .social-link--inst {
-  background-position: -13px -145px;
-  // margin-left: -1px;
-
-  &:active {
-    opacity: 0.3;
-    outline: none;
-    // background: #252525;
-  }
+  background-position: 55% -145px;
+  // background-position: -13px -145px;
 }
 
 .page-footer__copyright {
   display: block;
-  margin: 0;
+
+  margin: 0 20px;
 
   &-link {
     display: block;
-    margin: 0 20px;
     margin-top: 15px;
     padding: 15px 0;
 
@@ -134,19 +129,19 @@
   .page-footer__wrapper {
     position: relative;
 
+    padding-top: 50px;
     padding-bottom: 60px;
   }
 
   .page-footer__contacts {
-    position: static;
     padding: 0;
+    margin: 0;
     margin-bottom: 50px;
 
     text-align: left;
 
     b {
-      display: inline-block;
-      padding-bottom: 14px;
+      text-transform: uppercase;
     }
 
     &-hidden {
@@ -164,7 +159,8 @@
       font-weight: 400;
       text-align: left;
       outline: none;
-      cursor: text;
+
+      pointer-events: none;
     }
 
     &-link:hover {
@@ -182,23 +178,21 @@
     margin: 0;
   }
 
-  .social-links {
-    display: block;
-    font-size: 0;
-  }
-
   .social-link {
-    width: 213px;
+    width: 34%;
   }
 
   .social-link--vk {
-    background-position: 45px -13px;
+        background-position: 50% -13px;
+    // background-position: 45px -13px;
     }
   .social-link--fb {
-    background-position: 49px -282px;
+        background-position: 50% -282px;
+    // background-position: 49px -282px;
   }
   .social-link--inst {
-    background-position: 40px -145px;
+        background-position: 50% -145px;
+    // background-position: 40px -145px;
   }
 
 
@@ -208,13 +202,9 @@
     top: 50px;
     right: 0;
 
-    display: block;
     margin: 0;
 
     &-link {
-      display: block;
-      margin: 0;
-      margin-top: 15px;
       padding: 15px 30px;
     }
   }
@@ -223,29 +213,25 @@
 
 @media @desktop-widths {
   .page-footer__wrapper {
-    .clearfix();
-
-    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .page-footer__contacts {
-    display: inline-block;
-    float: left;
-    width: 340px;
     margin-right: 60px;
-    margin-top: 0;
     margin-bottom: 0;
   }
 
   .page-footer__social {
-    float: left;
     width: 170px;
+    margin-right: 200px;
   }
 
   .social-links {
+    display: block;
     text-align: center;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 28px;
   }
 
   .social-link {
@@ -253,6 +239,7 @@
     height: 50px;
     margin-right: 6px;
     margin-left: -1px;
+    margin-top: 15px;
 
     font-size: 0;
     background: transparent url("../img/social-s-sprite.png") no-repeat;
@@ -274,6 +261,6 @@
 
 
   .page-footer__copyright {
-    float: right;
+    position: static;
   }
 }

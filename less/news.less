@@ -7,10 +7,8 @@
 .news__wrapper {
   .container-fluid();
 
-  padding-top: 38px;
+  padding-top: 33px;
   padding-bottom: 28px;
-
-  background-color: @bg-lightgrey;
 }
 
 .news__title {
@@ -18,7 +16,7 @@
   margin-bottom: 30px;
 
   font-size: 30px;
-  line-height: 30px;
+  line-height: 40px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -36,12 +34,12 @@
   min-height: 85px;
 
   margin: 0 20px;
-  margin-bottom: 16px;
-  padding-bottom: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 20px;
   padding-left: 70px;
 
   font-size: 18px;
-  line-height: 27px;
+  line-height: 28px;
 
   border-bottom: 1px solid #e5ddd5;
 
@@ -93,6 +91,33 @@
       }
 }
 
+.news__item:hover {
+  cursor: pointer;
+
+  .news__date {
+    background: #826550;
+  }
+
+  p {
+    color: #826550;
+    text-decoration: underline;
+  }
+}
+
+.news__item:active {
+  // cursor: pointer;
+
+  .news__date {
+    color: #a09187;
+    background: #6a4d38;
+  }
+
+  p {
+    color: #6a4d38;
+    text-decoration: underline;
+  }
+}
+
 .news__to-all {
   display: block;
   width: auto;
@@ -101,13 +126,18 @@
   color: #000000;
   background-color: #f8f5f2;
   border: 1px solid #e5ddd5;
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:active {
+    color: #958c84;
+    background-color: #d5c9bd;
+  }
 }
 
 @media @tablet-widths {
-  .news {
-    padding-bottom: 33px;
-  }
-
   .news__wrapper {
     display: flex;
     flex-direction: column;
@@ -115,6 +145,7 @@
     position: relative;
     padding: 0;
     padding-top: 50px;
+    padding-bottom: 36px;
   }
 
   .news__title {
@@ -128,14 +159,14 @@
     display: flex;
     justify-content: space-between;
     font-size: 0;
-    padding-bottom: 36px;
   }
 
   .news__item {
     display: inline-block;
     width: 50%;
     margin: 0;
-    padding: 0 30px;
+    padding: 0;
+    padding-right: 30px;
     padding-left: 70px;
     vertical-align: top;
 
@@ -155,12 +186,10 @@
 }
 
 @media @desktop-widths {
-  .news {
-    padding-bottom: 32px;
-  }
 
   .news__wrapper {
-    padding-top: 62px;
+    padding-top: 64px;
+    padding-bottom: 40px;
   }
 
   .news__title {

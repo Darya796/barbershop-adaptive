@@ -1,7 +1,7 @@
 .main-nav {
   position: relative;
-                                   /*width: 320px;*/
-  width: auto;  /*from flex*/      /*margin: 0 auto;  from float*/
+
+  width: auto;
 
   min-height: 51px;
   background-color: #826550;
@@ -37,7 +37,8 @@
   content: "";
   position: absolute;
   top: 15px;
-  left: 24px;
+  left: 18px;
+  // left: 24px;
 
   width: 36px;
   height: 2px;
@@ -259,8 +260,8 @@
     background-color: #000000;
   }
 
-  .main-nav__wrapper {                 /*.container();*/
-    .container-fluid();  /*flex*/      /*.clearfix();  from float*/
+  .main-nav__wrapper {
+    .container-fluid();
 
     display: flex;
     justify-content: space-between;
@@ -272,17 +273,17 @@
 
   .main-nav__list {
 
-    display: flex;           /*float: left;*/
-    flex-wrap: wrap;         /*width: 570px;  from float*/
+    display: flex;
+    flex-wrap: wrap;
     flex-grow: 1;
     justify-content: space-between;
   }
 
-  .main-nav__user-list {   /*float: right;   from float*/
+  .main-nav__user-list {
     width: 60px;
   }
 
-  .main-nav__item {       /*float: left;*/
+  .main-nav__item {
     margin-right: 32px;
 
     &:last-child {

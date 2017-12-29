@@ -11,26 +11,25 @@
 
 @media @tablet-widths {
   .page-header {
-    display: flex;           /*position: relative;*/
-    flex-direction: column;  /*padding-bottom: 400px;   from float*/
+    display: flex;
+    flex-direction: column;
 
     background-color: #000000;
   }
 
   .page-header__logo {
-    order: 2; /*from flex*/
+    order: 2;
 
-    position: relative;     /*position: absolute;
-                            bottom: 0;  from float*/
+    position: relative;
 
     width: 100%;
     height: 400px;
 
-    // background-color: rgba(245, 65, 65, 0.5);
     background-color: #000000;
     background-image: url("../img/bg-header.jpg");
     background-repeat: no-repeat;
     background-position: center -39px;
+    background-size: cover;
 
     @media @retina {
       background-image: url("../img/bg-header@2x.jpg");
@@ -40,13 +39,42 @@
 
   .page-header__logo img {
       position: absolute;
-      bottom: 257px;
+      top: 40px;
       left: 50%;
 
       width: 370px;
       height: auto;
 
       transform: translateX(-50%);
+  }
+
+  .page-header__logo--corner {
+
+    height: 213px;
+
+    &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 50%;
+    height: 40px;
+    background-image:
+    linear-gradient(to right top, #f8f5f2 50%, transparent 50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 40px;
+    background-image:
+    linear-gradient(to left top, #f8f5f2 50%, transparent 50%);
+    }
   }
 }
 
@@ -59,6 +87,35 @@
   }
 
   .page-header__logo img {
-    bottom: 438px;
+    top: 55px;
+  }
+
+  .page-header__logo--corner {
+
+    height: 307px;
+
+    &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 50%;
+    height: 65px;
+    background-image:
+    linear-gradient(to right top, #f8f5f2 50%, transparent 50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 65px;
+    background-image:
+    linear-gradient(to left top, #f8f5f2 50%, transparent 50%);
+    }
   }
 }
