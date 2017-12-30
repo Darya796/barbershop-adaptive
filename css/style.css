@@ -41,7 +41,8 @@ img {
   font-weight: 700;
   text-decoration: none;
 }
-.slider__input {
+input[type="radio"],
+input[type="checkbox"] {
   display: none;
 }
 .slider__toggles {
@@ -63,6 +64,10 @@ img {
 }
 .slider__toggle:last-child {
   margin-right: 0;
+}
+input,
+textarea {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
 }
 .page-header__logo {
   height: 85px;
@@ -1639,7 +1644,7 @@ img {
     margin: 0 auto;
   }
 }
-.price__header {
+.price__title {
   margin-top: 0;
   margin-bottom: 27px;
   font-size: 30px;
@@ -1830,7 +1835,7 @@ img {
     padding-top: 45px;
     padding-bottom: 30px;
   }
-  .price__header {
+  .price__title {
     margin-bottom: 55px;
     font-size: 40px;
     text-align: left;
@@ -2012,5 +2017,346 @@ img {
     top: 40px;
     left: 21px;
     width: 27px;
+  }
+}
+.appointment {
+  position: relative;
+  color: #000000;
+  background-color: #f8f5f2;
+}
+.appointment::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 35px;
+  background-image: linear-gradient(to right top, #292929 49%, transparent 49%);
+}
+.appointment::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 35px;
+  background-image: linear-gradient(to left top, #292929 49%, transparent 49%);
+}
+.appointment__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 35px;
+  padding-bottom: 75px;
+}
+@media (min-width: 768px) {
+  .appointment__wrapper {
+    width: 640px;
+  }
+}
+@media (min-width: 1200px) {
+  .appointment__wrapper {
+    width: 960px;
+  }
+}
+.appointment__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.link-to-main {
+  display: none;
+}
+.appointment__form {
+  padding: 0 20px;
+}
+.form-section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 45px;
+}
+.form-input {
+  padding: 10px 20px;
+  margin-bottom: 6px;
+  width: 240px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 1px solid #e5ddd5;
+  outline: none;
+}
+.form-input:last-child {
+  margin-bottom: 0;
+}
+.delimiter {
+  margin-bottom: 30px;
+}
+.form-subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+.radio-beard {
+  display: inline-block;
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 115px;
+  margin-right: 25px;
+  margin-bottom: 5px;
+  width: 65px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+.radio-beard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 66px;
+  height: 105px;
+  background-image: url("../img/beard-sprite.png");
+}
+.radio-beard--admiral::after {
+  background-position: -99px -20px;
+}
+.radio-beard--feller::after {
+  background-position: -194px -20px;
+}
+.radio-beard--polar::after {
+  background-position: -392px -20px;
+}
+.radio-beard--boyarin::after {
+  background-position: -291px -20px;
+}
+.radio-beard--wiseacre::after {
+  background-position: -9px -20px;
+}
+.radio-beard input[type="radio"] + .radio-indicator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+}
+.radio-beard input[type="radio"]:checked + .radio-indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+  border-radius: 50%;
+}
+.checkbox-beard {
+  display: block;
+  position: relative;
+  padding: 4px 0;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  width: auto;
+  font-size: 18px;
+  line-height: 30px;
+}
+.checkbox-beard:last-child {
+  margin-bottom: 0;
+}
+.checkbox-beard input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 1px solid #e5ddd5;
+}
+.checkbox-beard input[type="checkbox"]:checked + .checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 7px;
+  width: 8px;
+  height: 2px;
+  background-color: #000000;
+}
+.checkbox-beard input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 11px;
+  width: 22px;
+  height: 2px;
+  background-color: #000000;
+}
+.checkbox-beard input[type="checkbox"]:checked + .checkbox-indicator::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.checkbox-beard input[type="checkbox"]:checked + .checkbox-indicator::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.submit {
+  display: block;
+  width: auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: #ffffff;
+  background: #826550;
+}
+@media (min-width: 768px) {
+  .appointment::before,
+  .appointment::after {
+    display: none;
+  }
+  .appointment__wrapper {
+    position: relative;
+    padding-top: 65px;
+  }
+  .appointment__title {
+    margin-bottom: 80px;
+    font-size: 40px;
+    text-align: left;
+  }
+  .link-to-main {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    margin: 0;
+    color: #000000;
+    background-color: #f8f5f2;
+    border: 1px solid #e5ddd5;
+  }
+  .appointment__form {
+    padding: 0;
+  }
+  .form-section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-bottom: 0;
+  }
+  .form-input {
+    display: block;
+    padding: 10px 25px;
+    margin-bottom: 35px;
+    width: 590px;
+    font-size: 24px;
+    line-height: 30px;
+    border: 1px solid #e5ddd5;
+    outline: none;
+  }
+  .form-input:last-child {
+    margin-bottom: 0;
+  }
+  .split {
+    width: 100%;
+    font-size: 0;
+  }
+  .split-input {
+    display: inline-block;
+    width: 161px;
+  }
+  .delimiter {
+    margin-bottom: 35px;
+  }
+  .form-input--height {
+    height: 190px;
+  }
+  .form-subtitle {
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 60px;
+    margin-bottom: 45px;
+  }
+  .form-subtitle::after {
+    content: "";
+    position: relative;
+    display: block;
+    top: -15px;
+    z-index: 1;
+    border-bottom: 1px solid #e5ddd5;
+  }
+  .form-subtitle__line {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 0;
+    padding: 0 25px;
+    text-align: center;
+    background-color: #f8f5f2;
+  }
+  .radio-beard {
+    padding-top: 85px;
+    padding-bottom: 135px;
+    margin-right: 74px;
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+  .radio-beard:last-child {
+    margin-right: 0;
+  }
+  .checkbox-beard {
+    display: inline-block;
+    margin-bottom: 45px;
+    width: 258px;
+    font-size: 24px;
+  }
+  .checkbox-beard:last-child {
+    margin-bottom: 45px;
+  }
+  .submit {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .appointment__wrapper {
+    padding-bottom: 85px;
+  }
+  .form-input {
+    margin-right: 35px;
+  }
+  .form-input {
+    display: inline-block;
+    width: 408px;
+  }
+  .delimiter {
+    margin-right: 0;
+  }
+  .split-input {
+    width: 244px;
+  }
+  .form-input--height {
+    width: 910px;
+  }
+  .form-subtitle {
+    padding-top: 75px;
+    margin-bottom: 50px;
+  }
+  .radio-beard {
+    margin-right: 154px;
+  }
+  .checkbox-beard {
+    width: 257px;
+  }
+  .submit {
+    margin-top: 35px;
   }
 }
