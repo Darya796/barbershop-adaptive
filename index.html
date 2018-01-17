@@ -5,7 +5,7 @@
   <title>Барбершоп "Бородинский"</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/normalize_min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -50,7 +50,7 @@
 
         <ul class="main-nav__user-list">
           <li class="main-nav__user-item">
-            <a class="main-nav__user-login" href="#" title="Войти">
+            <a class="main-nav__user-login  login-form-link" href="#" title="Войти">
               Вход
             </a>
           </li>
@@ -265,6 +265,40 @@
        </p>
      </div>
    </footer>
+
+   <section class="login-form">
+     <div class="login-form__wrapper">
+       <h2 class="login-form__title">Личный кабинет</h2>
+
+       <span class="login-form__descr">Введите свой логин и пароль, чтобы войти</span>
+
+       <form class="login-form__inputs" action="https://echo.htmlacademy.ru" method="post">
+
+         <input class="login-form__user-name" type="text" name="login" placeholder="Логин">
+
+         <input class="login-form__user-password" type="password" name="password" placeholder="Пароль">
+
+         <div class="login-form__split">
+           <label class="checkbox  checkbox--login-form">
+             <input type="checkbox" name="remember">
+             <span class="checkbox-indicator"></span>
+         Запомните меня
+       </label>
+
+         <a class="login-form__restore" href="#">Я забыл пароль!</a>
+       </div>
+
+       <div class="login-form__split">
+       <button class="login-form__btn-enter btn" type="submit">Войти <span class="btn-enter--hidden-text">в личный кабинет</span></button>
+
+        <button class="login-form__btn-close btn" type="button" title="Закрыть">Закрыть</button>
+      </div>
+
+     </form>
+     </div>
+   </section>
+
+   <div class="overlay"></div>
 
 <script src="js/script.js"></script>
 </body>
